@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+/* General CSS */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    border: 1px solid lightgray;
+    padding: 10px;
+    padding: 70px;
+}
+
+/* SWITCH */
+
+.switch-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: pink;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px pink;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* SECTIONS */
+
+.new-task {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: grey;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    width: 95%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    background-color: palevioletred;
+    height: 40px;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+.task-done {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    background-color: lightgray;
+    height: 40px;
+    margin: 5px 0;
+    padding-left: 10px;
+    text-decoration: line-through;
+}
+
+/* INPUTS */
+
+input {
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 95%;
+    font-size: 15px;
+    color: gray;
+    margin: 10px 0;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* BUTTONS */
+
+.new-task-btn {
+    width: 100px;
+    background-color: pink;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px 0;
+    transition-duration: 0.4s;
+}
+
+.new-task-btn:hover {
+    background-color: palevioletred;
+    color: white;
+}
+
+.new-task-btn:focus {
+    outline: none;
+}
+
+.clear-task-btn {
+    width: 120px;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px 0;
+    transition-duration: 0.4s;
+}
+
+.clear-task-btn:hover {
+    background-color: #666666;
+    color: white;
+}
+
+.clear-task-btn:focus {
+    outline: none;
+}
